@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farsly — Thoughtfully Made, Freshly Served</title>
+  <meta name="description"
+    content="Premium healthy food and poke bowls crafted with organic, fresh ingredients. Build your own bowl or try our signature recipes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="nav">
+      <a href="#/" class="nav-logo">FARSLY</a>
+
+      <div class="nav-links">
+        <a href="#/" class="nav-link active">Home</a>
+        <a href="#/menu" class="nav-link">Menu</a>
+        <a href="#/build" class="nav-link">Build Your Bowl</a>
+        <a href="#/membership" class="nav-link">Farsly Club</a>
+      </div>
+
+      <div class="nav-actions">
+
+        <button class="nav-action" aria-label="Favorites" onclick="window.location.hash='#/favorites'">
+          <span class="ico" data-icon="heart"></span>
+          <span class="badge" id="favorites-badge">0</span>
+        </button>
+
+        <button class="nav-action" aria-label="Cart" onclick="window.location.hash='#/cart'">
+          <span class="ico" data-icon="cart"></span>
+          <span class="badge" id="cart-badge">0</span>
+        </button>
+
+        <div class="nav-auth" id="nav-auth-container">
+          <a href="#/auth" class="btn btn-secondary btn-sm">Log in</a>
+          <a href="#/auth" class="btn btn-primary btn-sm">Sign up</a>
+        </div>
+
+        <button class="nav-hamburger" aria-label="Menu" id="mobile-menu-btn">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <nav class="mobile-nav-links">
+      <a href="#/" class="mobile-nav-link active">Home</a>
+      <a href="#/menu" class="mobile-nav-link">Menu</a>
+      <a href="#/build" class="mobile-nav-link">Build Your Bowl</a>
+      <a href="#/find" class="mobile-nav-link">Find Your Bowl</a>
+      <a href="#/club" class="mobile-nav-link">Farsly Club</a>
+    </nav>
+  </div>
+
+  <main id="app-root">
+    <!-- Home Page View -->
+    <div class="page entering" id="view-home">
+
+      <!-- 1. Hero -->
+      <section class="hero">
+        <div class="container-wide hero-inner">
+          <div class="hero-content">
+            <div class="eyebrow reveal">Premium & Healthy</div>
+            <h1 class="hero-title reveal" style="transition-delay: 100ms;">Freshly made.<br>Thoughtfully yours.</h1>
+            <p class="hero-subtitle reveal" style="transition-delay: 200ms;">Chef-crafted poke and wholesome bowls made
+              from responsibly sourced, organic ingredients. Build your perfect meal in seconds.</p>
+            <div class="hero-actions reveal" style="transition-delay: 300ms;">
+              <a href="#/build" class="btn btn-primary btn-lg">Build Your Bowl</a>
+              <a href="#/menu" class="btn btn-outline btn-lg">Explore Menu</a>
+            </div>
+          </div>
+          <div class="hero-visual reveal" style="transition-delay: 400ms;">
+            <div class="hero-carousel" id="hero-carousel">
+              <div class="hero-carousel-track" id="hero-carousel-track">
+
+                <!-- Slide 1 -->
+                <div class="hero-slide active" data-slide="0">
+                  <div class="hero-slide-bowl">
+                    <div class="hero-img-ring"></div>
+                    <div class="hero-decor decor-1">🥑</div>
+                    <div class="hero-decor decor-2">🌿</div>
+                    <div class="hero-decor decor-3">🐟</div>
+                    <img src="assets/img/hero-bowl.png" alt="Salmon Signature">
+                  </div>
+                  <div class="hero-nutri">
+                    <div class="hero-nutri-header">
+                      <span class="hero-nutri-title">Salmon Signature</span>
+                    </div>
+                    <div class="hero-nutri-desc">Wild-caught salmon, avocado, edamame, and house ponzu.</div>
+                    <div class="hero-nutri-footer">
+                      <span class="hero-nutri-val">42g</span>
+                      <span class="hero-nutri-label">Protein</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="hero-slide" data-slide="1">
+                  <div class="hero-slide-bowl">
+                    <div class="hero-img-ring"></div>
+                    <div class="hero-decor decor-1">🦐</div>
+                    <div class="hero-decor decor-2">🥭</div>
+                    <div class="hero-decor decor-3">🥒</div>
+                    <img src="assets/img/shrimp-garden.png" alt="Shrimp Garden">
+                  </div>
+                  <div class="hero-nutri">
+                    <div class="hero-nutri-header">
+                      <span class="hero-nutri-title">Shrimp Garden</span>
+                    </div>
+                    <div class="hero-nutri-desc">Poached shrimp, mango, cucumber, and spicy mayo.</div>
+                    <div class="hero-nutri-footer">
+                      <span class="hero-nutri-val">34g</span>
+                      <span class="hero-nutri-label">Protein</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="hero-slide" data-slide="2">
+                  <div class="hero-slide-bowl">
+                    <div class="hero-img-ring"></div>
+                    <div class="hero-decor decor-1">🍗</div>
+                    <div class="hero-decor decor-2">🥦</div>
+                    <div class="hero-decor decor-3">🥕</div>
+                    <img src="assets/img/teriyaki-chicken.png" alt="Teriyaki Chicken">
+                  </div>
+                  <div class="hero-nutri">
+                    <div class="hero-nutri-header">
+                      <span class="hero-nutri-title">Teriyaki Chicken</span>
+                    </div>
+                    <div class="hero-nutri-desc">Grilled chicken, broccoli, carrots, and sweet teriyaki.</div>
+                    <div class="hero-nutri-footer">
+                      <span class="hero-nutri-val">48g</span>
+                      <span class="hero-nutri-label">Protein</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Carousel Controls -->
+              <div class="hero-carousel-controls">
+                <button class="carousel-btn prev" id="hero-prev" aria-label="Previous bowl">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </button>
+                <div class="carousel-pagination" id="hero-pagination">01 / 03</div>
+                <button class="carousel-btn next" id="hero-next" aria-label="Next bowl">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. What is Farsly -->
+      <section class="home-section">
+        <div class="container about-grid">
+          <div class="about-visual reveal">
+            <!-- Simulated image using colored background/gradients for now -->
+            <div class="farm-visual">
+              <img src="assets/img/farm-to-bowl.jpeg" alt="Fresh ingredients from farm to bowl">
+            </div>
+          </div>
+          <div class="about-content reveal">
+            <div class="eyebrow text-coral">Our Philosophy</div>
+            <h2>Real food, without the compromise.</h2>
+            <p>At Farsly, we believe that eating well shouldn't mean sacrificing flavor or convenience. Every ingredient
+              in our kitchen is meticulously sourced, prepared fresh daily, and crafted to fuel your body.</p>
+            <p>From sustainably caught fish to local organic greens, we put uncompromising quality in every bowl.</p>
+
+            <div class="about-stats">
+              <div class="about-stat">
+                <div class="about-stat-num">100%</div>
+                <div class="about-stat-label">Organic Greens</div>
+              </div>
+              <div class="about-stat">
+                <div class="about-stat-num">0</div>
+                <div class="about-stat-label">Artificial Additives</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Farm to Bowl -->
+      <section class="home-section">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="eyebrow text-coral">The Journey</div>
+            <h2>Farm to Bowl</h2>
+            <p>We trace every ingredient back to its source, ensuring peak freshness from harvest to your hands.</p>
+          </div>
+
+          <div class="farm-track reveal">
+            <div class="farm-step">
+              <div class="farm-step-icon"><span class="ico" data-icon="leaf"></span></div>
+              <h4>Sustainably Sourced</h4>
+              <p>Partnering with local farms and certified sustainable fisheries.</p>
+            </div>
+            <div class="farm-step">
+              <div class="farm-step-icon"><span class="ico" data-icon="star"></span></div>
+              <h4>Fresh Daily</h4>
+              <p>Prepared from scratch every single morning.</p>
+            </div>
+            <div class="farm-step">
+              <div class="farm-step-icon"><span class="ico" data-icon="fire"></span></div>
+              <h4>Chef Crafted</h4>
+              <p>Balanced flavors designed by culinary experts.</p>
+            </div>
+            <div class="farm-step">
+              <div class="farm-step-icon"><span class="ico" data-icon="heart"></span></div>
+              <h4>Nutrient Dense</h4>
+              <p>Packed with the protein and vitamins you need.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Signature Bowls -->
+      <section class="home-section">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="eyebrow text-coral">Chef's Picks</div>
+            <h2>Signature Bowls</h2>
+            <p>Perfectly balanced recipes designed to satisfy. Try our most loved combinations.</p>
+          </div>
+
+          <div class="signature-grid reveal" id="home-signatures">
+            <!-- Will be populated by JS or hardcoded for now since JS isn't rendering it yet -->
+            <div class="sig-card">
+              <div class="sig-card-img">
+                <div class="sig-card-img-bg" style="background: url('assets/img/signature-bowls.png') center/cover;">
+                </div>
+                <div class="sig-card-badge">POPULAR</div>
+                <button class="sig-card-fav"><span class="ico" data-icon="heart"></span></button>
+              </div>
+              <div class="sig-card-body">
+                <h3>The Classic Salmon</h3>
+                <p class="sig-card-ingredients">Fresh salmon, avocado, edamame, cucumber, house ponzu on sushi rice.</p>
+                <div class="sig-card-meta">
+                  <span class="sig-card-price">$14.50</span>
+                  <div class="sig-card-nutri">
+                    <span><span class="ico" data-icon="fire" style="width:12px;height:12px;"></span> 540 cal</span>
+                    <span>32g P</span>
+                  </div>
+                </div>
+                <div class="sig-card-actions">
+                  <button class="btn btn-primary">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="sig-card">
+              <div class="sig-card-img">
+                <div class="sig-card-img-bg" style="background: url('assets/img/signature-bowls.png') right/cover;">
+                </div>
+                <button class="sig-card-fav"><span class="ico" data-icon="heart"></span></button>
+              </div>
+              <div class="sig-card-body">
+                <h3>Spicy Tuna Crunch</h3>
+                <p class="sig-card-ingredients">Spicy ahi tuna, jalapeno, corn, crispy onions, spicy mayo on brown rice.
+                </p>
+                <div class="sig-card-meta">
+                  <span class="sig-card-price">$15.00</span>
+                  <div class="sig-card-nutri">
+                    <span><span class="ico" data-icon="fire" style="width:12px;height:12px;"></span> 610 cal</span>
+                    <span>38g P</span>
+                  </div>
+                </div>
+                <div class="sig-card-actions">
+                  <button class="btn btn-primary">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="sig-card">
+              <div class="sig-card-img">
+                <div class="sig-card-img-bg" style="background: url('assets/img/signature-bowls.png') left/cover;">
+                </div>
+                <div class="sig-card-badge">VEGAN</div>
+                <button class="sig-card-fav"><span class="ico" data-icon="heart"></span></button>
+              </div>
+              <div class="sig-card-body">
+                <h3>Earth Bowl</h3>
+                <p class="sig-card-ingredients">Organic tofu, sweet potato, kale, quinoa, sesame ginger dressing.</p>
+                <div class="sig-card-meta">
+                  <span class="sig-card-price">$13.50</span>
+                  <div class="sig-card-nutri">
+                    <span><span class="ico" data-icon="fire" style="width:12px;height:12px;"></span> 480 cal</span>
+                    <span>22g P</span>
+                  </div>
+                </div>
+                <div class="sig-card-actions">
+                  <button class="btn btn-primary">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: var(--sp-10);" class="reveal">
+            <a href="#/menu" class="btn btn-secondary">View Full Menu</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Build Experience (Interactive CTA) -->
+      <section class="home-section" style="overflow: hidden;">
+        <div class="container-wide">
+          <div class="build-exp-layout">
+
+            <!-- Interactive Left Side -->
+            <div class="build-exp-interactive reveal">
+              <!-- BASE -->
+              <div class="ingredient-orbit active" id="orbit-base">
+                <div class="orbit-item" style="--angle: 210deg; --radius: 180px;">
+                  <div class="orbit-pill"><span class="ico" data-icon="leaf"></span> Sushi Rice</div>
+                </div>
+                <div class="orbit-item" style="--angle: 330deg; --radius: 170px;">
+                  <div class="orbit-pill"><span class="ico" data-icon="leaf"></span> Quinoa</div>
+                </div>
+                <div class="orbit-item" style="--angle: 90deg; --radius: 190px;">
+                  <div class="orbit-pill"><span class="ico" data-icon="leaf"></span> Spring Mix</div>
+                </div>
+              </div>
+
+              <!-- PROTEIN -->
+              <div class="ingredient-orbit" id="orbit-protein" style="opacity:0; transform:scale(0.85);">
+                <div class="orbit-item" style="--angle: 180deg; --radius: 190px;">
+                  <div class="orbit-pill"><span class="ico" data-icon="fire"></span> Spicy Tuna</div>
+                </div>
+                <div class="orbit-item" style="--angle: 300deg; --radius: 180px;">
+                  <div class="orbit-pill"><span class="ico" data-icon="star"></span> Salmon</div>
+                </div>
+                <div class="orbit-item" style="--angle: 60deg; --radius: 170px;">
+                  <div class="orbit-pill"><span class="ico" data-icon="leaf"></span> Tofu</div>
+                </div>
+              </div>
+
+              <!-- TOPPINGS -->
+              <div class="ingredient-orbit" id="orbit-toppings" style="opacity:0; transform:scale(0.85);">
+                <div class="orbit-item" style="--angle: 220deg; --radius: 200px;">
+                  <div class="orbit-pill">🥑 Avocado</div>
+                </div>
+                <div class="orbit-item" style="--angle: 340deg; --radius: 180px;">
+                  <div class="orbit-pill">🥒 Cucumber</div>
+                </div>
+                <div class="orbit-item" style="--angle: 110deg; --radius: 190px;">
+                  <div class="orbit-pill">🌿 Edamame</div>
+                </div>
+                <div class="orbit-item" style="--angle: 40deg; --radius: 210px;">
+                  <div class="orbit-pill">🥭 Mango</div>
+                </div>
+              </div>
+
+              <!-- DRESSING -->
+              <div class="ingredient-orbit" id="orbit-dressing" style="opacity:0; transform:scale(0.85);">
+                <div class="orbit-item" style="--angle: 250deg; --radius: 180px;">
+                  <div class="orbit-pill"><span class="ico" data-icon="fire"></span> Spicy Mayo</div>
+                </div>
+                <div class="orbit-item" style="--angle: 350deg; --radius: 190px;">
+                  <div class="orbit-pill"><span class="ico" data-icon="star"></span> House Ponzu</div>
+                </div>
+                <div class="orbit-item" style="--angle: 90deg; --radius: 170px;">
+                  <div class="orbit-pill"><span class="ico" data-icon="leaf"></span> Sesame Ginger</div>
+                </div>
+              </div>
+
+              <div class="build-exp-bowl">
+                <img src="assets/img/hero-bowl.png" alt="Build Your Bowl">
+              </div>
+            </div>
+
+            <!-- Right Side Content -->
+            <div class="build-exp-content reveal">
+              <div class="eyebrow text-coral">Signature Feature</div>
+              <h2>Build Your Perfect Bowl</h2>
+              <p>Over 1,000 possible combinations. Fresh ingredients, chef-crafted sauces, endless ways to fuel your
+                day.</p>
+
+              <!-- Informational Steps -->
+              <div class="build-exp-info-card">
+                <div class="build-info-step">
+                  <div class="info-step-num">01</div>
+                  <div class="info-step-text">Choose Base</div>
+                </div>
+                <div class="build-info-step">
+                  <div class="info-step-num">02</div>
+                  <div class="info-step-text">Pick Protein</div>
+                </div>
+                <div class="build-info-step">
+                  <div class="info-step-num">03</div>
+                  <div class="info-step-text">Load Toppings</div>
+                </div>
+                <div class="build-info-step">
+                  <div class="info-step-num">04</div>
+                  <div class="info-step-text">Add Dressing</div>
+                </div>
+              </div>
+
+              <a href="#/build" class="btn btn-primary btn-lg btn-block" style="margin-top: var(--sp-6);">Start
+                Building</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. Farsly Club Preview -->
+      <section class="home-section">
+        <div class="container club-preview reveal">
+          <div class="club-preview-content">
+            <div class="eyebrow text-amber">Farsly Club</div>
+            <h2>Eat well. Earn rewards.</h2>
+            <p>Join our exclusive membership club. Earn points on every order, unlock free bowls, and get access to
+              member-only seasonal drops.</p>
+
+            <div class="club-perks">
+              <div class="club-perk">
+                <div class="club-perk-icon"><span class="ico" data-icon="star"></span></div>
+                <div class="club-perk-text">
+                  <h4>Earn on every bite</h4>
+                  <p>10 points for every $1 spent.</p>
+                </div>
+              </div>
+              <div class="club-perk">
+                <div class="club-perk-icon"><span class="ico" data-icon="heart"></span></div>
+                <div class="club-perk-text">
+                  <h4>Birthday rewards</h4>
+                  <p>A free signature bowl on your special day.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#/membership" class="btn btn-dark">Explore Benefits</a>
+          </div>
+
+          <div class="club-preview-card">
+            <div class="overline">Member Snapshot</div>
+            <div class="club-card-points">1,240 <span
+                style="font-size: var(--fs-lg); font-family: var(--ff-body); font-weight: 500;">pts</span></div>
+            <div class="club-card-label">Seedling Tier</div>
+            <div class="club-progress">
+              <div class="club-progress-bar" style="width: 65%;"></div>
+            </div>
+            <div class="club-next-reward">260 pts to next reward (Free Drink)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. Final CTA -->
+      <section class="final-cta">
+        <div class="container reveal">
+          <h2>Ready to eat something good?</h2>
+          <p>Order ahead for pickup or get it delivered straight to your door.</p>
+          <a href="#/menu" class="btn btn-primary btn-lg">Order Now</a>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- =========================================================
+         MENU PAGE
+         ========================================================= -->
+    <div class="page menu-page" id="view-menu">
+
+      <!-- Menu Hero -->
+      <section class="menu-hero">
+        <div class="container">
+
+          <div class="menu-hero-copy reveal">
+            <div class="eyebrow text-coral">The Farsly Menu</div>
+
+            <h1>
+              Good food.<br>
+              <em>Made your way.</em>
+            </h1>
+
+            <p>
+              Explore chef-crafted bowls, fresh ingredients, and nourishing
+              drinks made for the way you want to eat.
+            </p>
+          </div>
+
+          <!-- Search -->
+          <div class="menu-search-wrap reveal">
+            <span class="ico" data-icon="search"></span>
+
+            <input type="text" id="menu-search" class="menu-search" placeholder="Search your next favorite..."
+              autocomplete="off">
+
+            <button type="button" class="menu-search-clear" id="menu-search-clear" aria-label="Clear search">
+              ×
+            </button>
+          </div>
+
+          <!-- Categories -->
+          <div class="menu-categories reveal" id="menu-categories">
+
+            <button class="menu-category active" data-category="all" type="button">
+              All
+            </button>
+
+            <button class="menu-category" data-category="poke" type="button">
+              Poke
+            </button>
+
+            <button class="menu-category" data-category="salad" type="button">
+              Salad
+            </button>
+
+            <button class="menu-category" data-category="drinks" type="button">
+              Drinks
+            </button>
+
+            <button class="menu-category" data-category="seasonal" type="button">
+              Seasonal
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- Menu Content -->
+      <section class="menu-content">
+        <div class="container">
+
+          <!-- Result Header -->
+          <div class="menu-result-header reveal">
+
+            <div>
+              <span class="menu-result-label">FARSLY SELECTION</span>
+              <h2 id="menu-result-title">Made fresh for you</h2>
+            </div>
+
+            <div class="menu-result-count" id="menu-result-count">
+              0 items
+            </div>
+
+          </div>
+
+
+          <!-- Menu Grid -->
+          <div class="menu-grid" id="menu-grid">
+            <!-- Cards generated by JavaScript -->
+          </div>
+
+
+          <!-- Empty State -->
+          <div class="menu-empty" id="menu-empty" hidden>
+            <div class="menu-empty-icon">
+              <span class="ico" data-icon="search"></span>
+            </div>
+
+            <h3>No bowl found.</h3>
+
+            <p>
+              We couldn't find anything matching your search.
+              Try another dish or explore all of our fresh picks.
+            </p>
+
+            <button type="button" class="btn btn-secondary" id="menu-reset">
+              Explore all menu
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- =========================================================
+     FOOD DETAIL PAGE
+     ========================================================= -->
+    <div class="page food-detail-page" id="view-food-detail">
+
+      <div id="food-detail-content">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+    </div>
+
+    <!-- =========================================================
+     FARSLY CLUB — MEMBERSHIP PAGE
+     ========================================================= -->
+
+    <div class="page membership-page" id="view-membership">
+
+      <!-- ==================== HERO ==================== -->
+
+      <section class="club-hero">
+
+        <div class="club-hero-content">
+
+          <span class="club-eyebrow">
+            FARSLY CLUB
+          </span>
+
+          <h1>
+            Eat well.<br>
+            <em>Get rewarded.</em>
+          </h1>
+
+          <p>
+            Every bowl brings you closer to exclusive rewards,
+            personalized perks, and a better Farsly experience.
+          </p>
+
+          <div class="club-hero-actions">
+            <button class="btn btn-primary" id="club-join-btn" type="button">
+              Join Farsly Club
+            </button>
+          </div>
+
+          <span class="club-login-note">
+            Already a member? Sign in
+          </span>
+
+        </div>
+
+
+        <!-- Premium Membership Card -->
+
+        <div class="club-card-wrap">
+
+          <div class="club-card">
+
+            <div class="club-card-top">
+              <span>FARSLY</span>
+              <span>CLUB ✦</span>
+            </div>
+
+            <div class="club-card-center">
+
+              <span class="club-card-label">
+                MEMBER
+              </span>
+
+              <strong id="club-card-name">
+                FARSLY MEMBER
+              </strong>
+
+            </div>
+
+            <div class="club-card-bottom">
+
+              <div class="club-card-points">
+
+                <small>
+                  POINTS
+                </small>
+
+                <strong id="club-card-points">
+                  0
+                </strong>
+
+              </div>
+
+              <div class="club-card-mark">
+                ✦
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================== MEMBERSHIP STATUS ==================== -->
+
+      <section class="club-status-section">
+
+        <div class="club-section-heading">
+
+          <span class="club-eyebrow">
+            YOUR JOURNEY
+          </span>
+
+          <h2>
+            Good food should<br>
+            <em>give something back.</em>
+          </h2>
+
+        </div>
+
+
+        <div class="club-progress-card">
+
+          <div class="club-progress-top">
+
+            <div class="club-current-tier">
+
+              <span class="club-label">
+                CURRENT TIER
+              </span>
+
+              <h3 id="club-tier">
+                Seed
+              </h3>
+
+            </div>
+
+
+            <div class="club-points-large">
+
+              <strong id="club-points">
+                0
+              </strong>
+
+              <span>
+                points
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="club-progress">
+
+            <div class="club-progress-bar">
+
+              <span id="club-progress-fill" style="width: 0%;"></span>
+
+            </div>
+
+
+            <div class="club-progress-info">
+
+              <span id="club-progress-text">
+                Start earning points with your first order.
+              </span>
+
+              <span id="club-next-tier">
+                2,500 pts
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================== HOW IT WORKS ==================== -->
+
+      <section class="club-how-section">
+
+        <div class="club-section-heading centered">
+
+          <span class="club-eyebrow">
+            HOW IT WORKS
+          </span>
+
+          <h2>
+            Three simple steps.
+          </h2>
+
+        </div>
+
+
+        <div class="club-steps">
+
+          <article class="club-step">
+
+            <span class="club-step-number">
+              01
+            </span>
+
+            <div class="club-step-content">
+
+              <h3>
+                Order
+              </h3>
+
+              <p>
+                Choose a bowl you love or
+                create your own.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="club-step">
+
+            <span class="club-step-number">
+              02
+            </span>
+
+            <div class="club-step-content">
+
+              <h3>
+                Earn
+              </h3>
+
+              <p>
+                Collect Farsly Points
+                every time you order.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="club-step">
+
+            <span class="club-step-number">
+              03
+            </span>
+
+            <div class="club-step-content">
+
+              <h3>
+                Enjoy
+              </h3>
+
+              <p>
+                Unlock rewards, perks,
+                and exclusive bowls.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================== REWARDS ==================== -->
+
+      <section class="club-rewards-section">
+
+        <div class="club-section-heading">
+
+          <span class="club-eyebrow">
+            YOUR REWARDS
+          </span>
+
+          <h2>
+            Something good<br>
+            <em>is waiting.</em>
+          </h2>
+
+        </div>
+
+
+        <div class="club-rewards-grid">
+
+
+          <!-- Reward 1 -->
+
+          <article class="club-reward-card">
+
+            <div class="reward-icon">
+              🥑
+            </div>
+
+            <div class="reward-info">
+
+              <span>
+                500 POINTS
+              </span>
+
+              <h3>
+                Free Avocado
+              </h3>
+
+              <p>
+                Add a little more goodness
+                to your bowl.
+              </p>
+
+            </div>
+
+            <button class="club-reward-btn" data-reward-cost="500" type="button">
+              Redeem
+            </button>
+
+          </article>
+
+
+          <!-- Reward 2 -->
+
+          <article class="club-reward-card">
+
+            <div class="reward-icon">
+              🥤
+            </div>
+
+            <div class="reward-info">
+
+              <span>
+                750 POINTS
+              </span>
+
+              <h3>
+                Free Drink
+              </h3>
+
+              <p>
+                Complete your meal
+                with a drink on us.
+              </p>
+
+            </div>
+
+            <button class="club-reward-btn" data-reward-cost="750" type="button">
+              Redeem
+            </button>
+
+          </article>
+
+
+          <!-- Reward 3 -->
+
+          <article class="club-reward-card locked">
+
+            <div class="reward-icon">
+              🥗
+            </div>
+
+            <div class="reward-info">
+
+              <span>
+                1,500 POINTS
+              </span>
+
+              <h3>
+                Free Bowl
+              </h3>
+
+              <p id="free-bowl-status">
+                1,500 pts required
+              </p>
+
+            </div>
+
+            <button class="club-reward-btn" disabled type="button">
+              Locked
+            </button>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================== PERSONALIZATION ==================== -->
+
+      <section class="club-personal-section">
+
+        <div class="club-personal-content">
+
+          <span class="club-eyebrow">
+            MADE FOR YOU
+          </span>
+
+          <h2>
+            Your Farsly,<br>
+            <em>your way.</em>
+          </h2>
+
+          <p>
+            Your favorite bowls, ingredients, and
+            preferences are always close at hand.
+          </p>
+
+          <button class="btn btn-primary" id="club-build-btn" type="button">
+            Build Your Bowl
+          </button>
+
+        </div>
+
+
+        <div class="club-preferences">
+
+          <div>
+
+            <span>
+              FAVORITE BOWL
+            </span>
+
+            <strong>
+              Shrimp Garden
+            </strong>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              USUAL PROTEIN
+            </span>
+
+            <strong>
+              42g+
+            </strong>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              FAVORITE INGREDIENT
+            </span>
+
+            <strong>
+              Avocado
+            </strong>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================== MEMBER EXCLUSIVE ==================== -->
+
+      <section class="club-exclusive-section">
+
+        <div class="club-exclusive-image">
+
+          <img src="assets/img/hero-bowl.png" alt="Farsly seasonal bowl">
+
+        </div>
+
+
+        <div class="club-exclusive-content">
+
+          <span class="club-eyebrow">
+            FOR MEMBERS
+          </span>
+
+          <h2>
+            A little more<br>
+            <em>to look forward to.</em>
+          </h2>
+
+          <p>
+            Discover seasonal creations and special perks
+            made exclusively for the Farsly community.
+          </p>
+
+          <button class="btn btn-secondary" id="club-exclusive-btn" type="button">
+            Explore Exclusive Bowls
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================== FINAL CTA ==================== -->
+
+      <section class="club-final-cta">
+
+        <span class="club-eyebrow">
+          FARSLY CLUB
+        </span>
+
+        <h2 style="color: white" ;>
+          Ready to<br>
+          <em>eat better?</em>
+        </h2>
+
+        <button class="btn btn-primary" id="club-final-join" type="button">
+          Join Farsly Club
+        </button>
+
+        <p>
+          Free to join · No subscription required
+        </p>
+
+      </section>
+
+    </div>
+
+    <!-- =========================================
+     CART & FAVORITES
+========================================= -->
+
+    <div class="page shopping-page" id="view-cart">
+
+      <section class="shopping-section">
+
+        <div class="shopping-container">
+
+          <!-- PAGE HEADER -->
+          <div class="shopping-header">
+
+            <span class="shopping-eyebrow">
+              FARSLY
+            </span>
+
+            <h1 id="shopping-page-title">
+              Your Bag
+            </h1>
+
+            <p id="shopping-page-description">
+              Your carefully chosen meals, ready when you are.
+            </p>
+
+          </div>
+
+
+          <!-- TABS -->
+          <div class="shopping-tabs">
+
+            <button class="shopping-tab active" data-shopping-tab="cart">
+              Your Bag
+              <span id="cart-tab-count">0</span>
+            </button>
+
+            <button class="shopping-tab" data-shopping-tab="favorites">
+              Favorites
+              <span id="favorites-tab-count">0</span>
+            </button>
+
+          </div>
+
+
+          <!-- CONTENT -->
+          <div id="shopping-content"></div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- =========================================================
+     BUILD YOUR BOWL
+     ========================================================= -->
+    <div class="page build-page" id="view-build">
+
+      <section class="build-builder">
+
+        <div class="build-container">
+
+          <!-- TOP -->
+          <div class="build-header">
+            <a href="#/menu" class="build-back">
+              ← Back to Menu
+            </a>
+
+            <div class="build-header-title">
+              <span class="eyebrow text-coral">FARSLY CUSTOM</span>
+              <h1>Make Your Own Bowl</h1>
+              <p>Fresh ingredients. Your perfect combination.</p>
+            </div>
+          </div>
+
+
+          <!-- MAIN BUILDER -->
+          <div class="build-layout">
+
+            <!-- ================================================
+             LEFT — VERTICAL STEPS
+             ================================================ -->
+            <aside class="build-sidebar">
+
+              <div class="build-sidebar-heading">
+                Build Your Bowl
+              </div>
+
+              <div class="build-steps" id="build-steps">
+
+                <button class="build-step active" data-step="0" type="button">
+                  <span class="build-step-number">1</span>
+                  <span class="build-step-label">
+                    <strong>Base</strong>
+                    <small>Choose your base</small>
+                  </span>
+                </button>
+
+                <button class="build-step" data-step="1" type="button">
+                  <span class="build-step-number">2</span>
+                  <span class="build-step-label">
+                    <strong>Protein</strong>
+                    <small>Pick your protein</small>
+                  </span>
+                </button>
+
+                <button class="build-step" data-step="2" type="button">
+                  <span class="build-step-number">3</span>
+                  <span class="build-step-label">
+                    <strong>Toppings</strong>
+                    <small>Load it up</small>
+                  </span>
+                </button>
+
+                <button class="build-step" data-step="3" type="button">
+                  <span class="build-step-number">4</span>
+                  <span class="build-step-label">
+                    <strong>Sauce</strong>
+                    <small>Finish with flavor</small>
+                  </span>
+                </button>
+
+                <button class="build-step" data-step="4" type="button">
+                  <span class="build-step-number">5</span>
+                  <span class="build-step-label">
+                    <strong>Extras</strong>
+                    <small>Make it yours</small>
+                  </span>
+                </button>
+
+                <button class="build-step" data-step="5" type="button">
+                  <span class="build-step-number">6</span>
+                  <span class="build-step-label">
+                    <strong>Review</strong>
+                    <small>Check your bowl</small>
+                  </span>
+                </button>
+
+              </div>
+
+              <div class="build-fresh-note">
+                <span class="ico" data-icon="leaf"></span>
+
+                <div>
+                  <strong>Freshly made every day</strong>
+                  <p>Organic ingredients, no artificial additives.</p>
+                </div>
+              </div>
+
+            </aside>
+
+
+            <!-- ================================================
+             CENTER
+             ================================================ -->
+            <main class="build-main">
+
+              <div class="build-main-content" id="build-main">
+                <!-- Generated by JS -->
+              </div>
+
+              <!-- LARGE BOWL -->
+              <div class="build-bowl-stage">
+
+                <div class="build-bowl-glow"></div>
+
+                <div class="build-bowl-ring"></div>
+
+                <img src="assets/img/plate.png" alt="Your custom bowl" class="build-bowl-image" id="build-bowl-image">
+
+                <div class="build-bowl-selection" id="build-bowl-selection">
+                  <span>Start building</span>
+                </div>
+
+              </div>
+
+
+              <!-- INGREDIENT CAROUSEL -->
+              <!-- INGREDIENT CAROUSEL -->
+              <div class="build-options-area">
+
+                <div class="build-options-header">
+                  <div>
+                    <span class="build-options-eyebrow">
+                      CHOOSE YOUR INGREDIENT
+                    </span>
+
+                    <h2 id="build-options-title">
+                      Choose Your Base
+                    </h2>
+                  </div>
+                </div>
+
+                <div class="build-options-track" id="build-options">
+                  <!-- Generated by JavaScript -->
+                </div>
+
+                <!-- Navigation BELOW the cards -->
+                <div class="build-options-navigation">
+
+                  <button class="build-arrow" id="build-prev" type="button" aria-label="Previous ingredients">
+                    ←
+                  </button>
+
+                  <button class="build-arrow" id="build-next" type="button" aria-label="Next ingredients">
+                    →
+                  </button>
+
+                </div>
+
+              </div>
+
+
+              <!-- NAVIGATION -->
+              <div class="build-navigation">
+
+                <button type="button" class="btn btn-secondary" id="build-back-btn">
+                  Back
+                </button>
+
+                <button type="button" class="btn btn-primary" id="build-next-btn">
+                  Next
+                </button>
+
+              </div>
+
+            </main>
+
+
+            <!-- ================================================
+             RIGHT — LIVE RECEIPT
+             ================================================ -->
+            <aside class="build-summary">
+
+              <div class="build-receipt">
+
+                <div class="build-receipt-top">
+                  <span class="build-receipt-label">
+                    FARSLY
+                  </span>
+
+                  <span class="build-receipt-small">
+                    YOUR BOWL
+                  </span>
+                </div>
+
+                <div class="build-receipt-title">
+                  <h2>Your Bowl</h2>
+
+                  <span id="build-summary-count" class="build-summary-count">
+                    0 items
+                  </span>
+                </div>
+
+                <div class="build-summary-list" id="build-summary-list">
+                  <div class="build-receipt-empty">
+                    Your selections will appear here.
+                  </div>
+                </div>
+
+                <div class="build-receipt-divider"></div>
+
+                <div class="build-receipt-nutrition">
+
+                  <div>
+                    <span>Calories</span>
+                    <strong id="build-calories">0</strong>
+                  </div>
+
+                  <div>
+                    <span>Protein</span>
+                    <strong id="build-protein">0g</strong>
+                  </div>
+
+                </div>
+
+                <div class="build-receipt-divider"></div>
+
+                <div class="build-summary-total">
+                  <span>Total</span>
+
+                  <strong id="build-total">
+                    Rp 0
+                  </strong>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-block" id="build-checkout-btn" disabled>
+                  Checkout
+                </button>
+
+              </div>
+
+            </aside>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- ============================================================
+     CHECKOUT PAGE
+     ============================================================ -->
+    <div class="page checkout-page" id="view-checkout">
+
+      <section class="checkout-section">
+        <div class="checkout-container">
+
+          <!-- Header -->
+          <div class="checkout-header">
+            <div>
+              <span class="checkout-eyebrow">FARSLY CHECKOUT</span>
+              <h1>Complete Your Order</h1>
+              <p>Fresh ingredients, thoughtfully prepared and ready for you.</p>
+            </div>
+
+            <div class="checkout-secure">
+              <span>🔒</span>
+              <span>Secure checkout</span>
+            </div>
+          </div>
+
+
+          <!-- Main Checkout Layout -->
+          <div class="checkout-layout">
+
+            <!-- ======================================================
+             LEFT — CUSTOMER & PAYMENT
+             ====================================================== -->
+            <main class="checkout-main">
+
+              <!-- Delivery Information -->
+              <section class="checkout-card">
+
+                <div class="checkout-card-header">
+                  <div class="checkout-card-number">01</div>
+
+                  <div>
+                    <span class="checkout-card-eyebrow">DELIVERY</span>
+                    <h2>Delivery Information</h2>
+                  </div>
+                </div>
+
+
+                <div class="checkout-form">
+
+                  <!-- Name -->
+                  <div class="checkout-field">
+                    <label for="checkout-name">
+                      Full Name
+                    </label>
+
+                    <input type="text" id="checkout-name" name="name" placeholder="Enter your full name"
+                      autocomplete="name" />
+
+                    <span class="checkout-error" id="checkout-name-error">
+                    </span>
+                  </div>
+
+
+                  <!-- Phone -->
+                  <div class="checkout-field">
+                    <label for="checkout-phone">
+                      Phone Number
+                    </label>
+
+                    <input type="tel" id="checkout-phone" name="phone" placeholder="08xxxxxxxxxx" autocomplete="tel" />
+
+                    <span class="checkout-error" id="checkout-phone-error">
+                    </span>
+                  </div>
+
+
+                  <!-- Address -->
+                  <div class="checkout-field checkout-field-full">
+                    <label for="checkout-address">
+                      Delivery Address
+                    </label>
+
+                    <textarea id="checkout-address" name="address" rows="3"
+                      placeholder="Enter your complete delivery address" autocomplete="street-address"></textarea>
+
+                    <span class="checkout-error" id="checkout-address-error">
+                    </span>
+                  </div>
+
+
+                  <!-- Delivery Notes -->
+                  <div class="checkout-field checkout-field-full">
+                    <label for="checkout-notes">
+                      Delivery Notes
+                      <span class="optional-label">Optional</span>
+                    </label>
+
+                    <textarea id="checkout-notes" name="notes" rows="2"
+                      placeholder="e.g. Leave at the front desk"></textarea>
+                  </div>
+
+                </div>
+
+              </section>
+
+
+              <!-- Payment -->
+              <section class="checkout-card">
+
+                <div class="checkout-card-header">
+                  <div class="checkout-card-number">02</div>
+
+                  <div>
+                    <span class="checkout-card-eyebrow">PAYMENT</span>
+                    <h2>Payment Method</h2>
+                  </div>
+                </div>
+
+
+                <div class="payment-methods">
+
+                  <div class="payment-method">
+                    <input type="radio" id="payment-qris" name="payment" value="qris">
+                    <label for="payment-qris">
+                      <span class="payment-method-icon">⌁</span>
+                      <span class="payment-method-name">QRIS</span>
+                      <span class="payment-method-description">Scan to pay</span>
+                    </label>
+                  </div>
+
+                  <div class="payment-method">
+                    <input type="radio" id="payment-ewallet" name="payment" value="ewallet">
+                    <label for="payment-ewallet">
+                      <span class="payment-method-icon">◌</span>
+                      <span class="payment-method-name">E-Wallet</span>
+                      <span class="payment-method-description">GoPay / OVO / DANA</span>
+                    </label>
+                  </div>
+
+                  <div class="payment-method">
+                    <input type="radio" id="payment-card" name="payment" value="card">
+                    <label for="payment-card">
+                      <span class="payment-method-icon">▱</span>
+                      <span class="payment-method-name">Card</span>
+                      <span class="payment-method-description">Credit / debit</span>
+                    </label>
+                  </div>
+
+                  <div class="payment-method">
+                    <input type="radio" id="payment-cod" name="payment" value="cod">
+                    <label for="payment-cod">
+                      <span class="payment-method-icon">◎</span>
+                      <span class="payment-method-name">Cash</span>
+                      <span class="payment-method-description">Pay on delivery</span>
+                    </label>
+                  </div>
+
+                </div>
+
+
+                <!-- Simulated Payment Area -->
+                <div class="payment-extra" id="payment-extra">
+                </div>
+
+              </section>
+
+
+              <!-- Terms -->
+              <div class="checkout-terms">
+
+                <label class="checkout-checkbox">
+                  <input type="checkbox" id="checkout-terms-checkbox" />
+
+                  <span class="checkout-checkbox-box"></span>
+
+                  <span>
+                    I agree to the Farsly
+                    <button type="button" class="checkout-inline-link">
+                      Terms & Conditions
+                    </button>
+                    and
+                    <button type="button" class="checkout-inline-link">
+                      Privacy Policy
+                    </button>.
+                  </span>
+                </label>
+
+                <span class="checkout-error" id="checkout-terms-error">
+                </span>
+
+              </div>
+
+
+              <!-- Mobile back -->
+              <button type="button" class="checkout-back-btn" id="checkout-back-btn">
+                ← Back to Your Bowl
+              </button>
+
+            </main>
+
+
+            <!-- ======================================================
+             RIGHT — ORDER SUMMARY
+             ====================================================== -->
+            <aside class="checkout-sidebar">
+
+              <div class="checkout-summary">
+
+                <!-- Summary Header -->
+                <div class="checkout-summary-header">
+
+                  <div>
+                    <span class="checkout-card-eyebrow">
+                      YOUR ORDER
+                    </span>
+
+                    <h2>Order Summary</h2>
+                  </div>
+
+                  <span class="checkout-item-count" id="checkout-item-count">
+                    0 items
+                  </span>
+
+                </div>
+
+
+                <!-- Items -->
+                <div class="checkout-items" id="checkout-items">
+
+                  <!-- Rendered by JavaScript -->
+
+                  <div class="checkout-empty">
+                    <span>🥗</span>
+                    <p>Your bowl will appear here.</p>
+                  </div>
+
+                </div>
+
+
+                <!-- Divider -->
+                <div class="checkout-divider"></div>
+
+
+                <!-- Price Breakdown -->
+                <div class="checkout-prices">
+
+                  <div class="checkout-price-row">
+                    <span>Subtotal</span>
+
+                    <strong id="checkout-subtotal">
+                      Rp 0
+                    </strong>
+                  </div>
+
+
+                  <div class="checkout-price-row">
+                    <span>Delivery</span>
+
+                    <strong id="checkout-delivery">
+                      Rp 15.000
+                    </strong>
+                  </div>
+
+
+                  <div class="checkout-price-row checkout-total-row">
+                    <span>Total</span>
+
+                    <strong id="checkout-total">
+                      Rp 15.000
+                    </strong>
+                  </div>
+
+                </div>
+
+
+                <!-- Place Order -->
+                <button type="button" class="checkout-place-order" id="checkout-place-order">
+
+                  <span>Place Order</span>
+
+                  <span class="checkout-place-order-arrow">
+                    →
+                  </span>
+
+                </button>
+
+
+                <!-- Security -->
+                <div class="checkout-security">
+
+                  <span>🔒</span>
+
+                  <div>
+                    <strong>Safe & Secure</strong>
+                    <span>
+                      Your information is protected.
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <!-- Freshness Card -->
+              <div class="checkout-fresh-card">
+
+                <div class="checkout-fresh-icon">
+                  ✦
+                </div>
+
+                <div>
+                  <strong>Made fresh for you</strong>
+
+                  <p>
+                    Your bowl is prepared only after
+                    you place your order.
+                  </p>
+                </div>
+
+              </div>
+
+            </aside>
+
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ============================================================
+     ORDER CONFIRMATION PAGE
+     ============================================================ -->
+    <div class="page confirmation-page" id="view-confirmation">
+
+      <section class="confirmation-section">
+
+        <div class="confirmation-container">
+
+          <div class="confirmation-success">
+
+            <div class="confirmation-check">
+              ✓
+            </div>
+
+            <span class="confirmation-eyebrow">
+              ORDER CONFIRMED
+            </span>
+
+            <h1>Your bowl is on its way!</h1>
+
+            <p>
+              Thank you for choosing Farsly.
+              We're preparing your order with care.
+            </p>
+
+          </div>
+
+
+          <div class="confirmation-order-card">
+
+            <div class="confirmation-order-header">
+
+              <div>
+                <span>ORDER NUMBER</span>
+
+                <strong id="confirmation-order-id">
+                  FRS-000000
+                </strong>
+              </div>
+
+              <div class="confirmation-status">
+                Confirmed
+              </div>
+
+            </div>
+
+
+            <div class="confirmation-details">
+
+              <div class="confirmation-detail">
+                <span>Estimated delivery</span>
+                <strong id="confirmation-delivery-time">
+                  25–35 min
+                </strong>
+              </div>
+
+              <div class="confirmation-detail">
+                <span>Payment</span>
+                <strong id="confirmation-payment">
+                  QRIS
+                </strong>
+              </div>
+
+              <div class="confirmation-detail">
+                <span>Total</span>
+                <strong id="confirmation-total">
+                  Rp 0
+                </strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="confirmation-actions">
+
+            <button type="button" class="confirmation-primary-btn" id="confirmation-receipt-btn">
+              View Receipt →
+            </button>
+
+            <button type="button" class="confirmation-secondary-btn" id="confirmation-track-btn">
+              Track Order
+            </button>
+
+          </div>
+
+
+          <button type="button" class="confirmation-home-btn" id="confirmation-home-btn">
+            Back to Home
+          </button>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- ============================================================
+     ORDER CONFIRMATION PAGE
+     ============================================================ -->
+    <div class="page confirmation-page" id="view-confirmation">
+
+      <section class="confirmation-section">
+
+        <div class="confirmation-container">
+
+          <div class="confirmation-success">
+
+            <div class="confirmation-check">
+              ✓
+            </div>
+
+            <span class="confirmation-eyebrow">
+              ORDER CONFIRMED
+            </span>
+
+            <h1>Your bowl is on its way!</h1>
+
+            <p>
+              Thank you for choosing Farsly.
+              We're preparing your order with care.
+            </p>
+
+          </div>
+
+
+          <div class="confirmation-order-card">
+
+            <div class="confirmation-order-header">
+
+              <div>
+                <span>ORDER NUMBER</span>
+
+                <strong id="confirmation-order-id">
+                  FRS-000000
+                </strong>
+              </div>
+
+              <div class="confirmation-status">
+                Confirmed
+              </div>
+
+            </div>
+
+
+            <div class="confirmation-details">
+
+              <div class="confirmation-detail">
+                <span>Estimated delivery</span>
+                <strong id="confirmation-delivery-time">
+                  25–35 min
+                </strong>
+              </div>
+
+              <div class="confirmation-detail">
+                <span>Payment</span>
+                <strong id="confirmation-payment">
+                  QRIS
+                </strong>
+              </div>
+
+              <div class="confirmation-detail">
+                <span>Total</span>
+                <strong id="confirmation-total">
+                  Rp 0
+                </strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="confirmation-actions">
+
+            <button type="button" class="confirmation-primary-btn" id="confirmation-receipt-btn">
+              View Receipt →
+            </button>
+
+            <button type="button" class="confirmation-secondary-btn" id="confirmation-track-btn">
+              Track Order
+            </button>
+
+          </div>
+
+
+          <button type="button" class="confirmation-home-btn" id="confirmation-home-btn">
+            Back to Home
+          </button>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- =========================================================
+     ORDER CONFIRMATION
+     ========================================================= -->
+    <div class="page order-confirmation-page" id="view-order-confirmation">
+
+      <section class="order-confirmation">
+
+        <div class="container">
+
+          <div class="receipt-card" id="receipt-card">
+
+            <div class="receipt-success">
+              <div class="receipt-check">✓</div>
+
+              <div class="eyebrow text-coral">
+                Order Confirmed
+              </div>
+
+              <h1>Your bowl is on its way.</h1>
+
+              <p>
+                We've received your order and our kitchen is getting started.
+              </p>
+            </div>
+
+            <div class="receipt-order-number">
+              Order <strong id="receipt-order-id">#FARSLY-0000</strong>
+            </div>
+
+            <div class="receipt-divider"></div>
+
+            <div class="receipt-items" id="receipt-items">
+              <!-- generated -->
+            </div>
+
+            <div class="receipt-divider"></div>
+
+            <div class="receipt-total">
+              <span>Total</span>
+              <strong id="receipt-total">Rp 0</strong>
+            </div>
+
+            <div class="receipt-qr">
+
+              <div id="order-qr"></div>
+
+              <strong>Scan to track your order</strong>
+
+              <p>
+                Get real-time updates on your order status.
+              </p>
+
+            </div>
+
+            <div class="receipt-estimate">
+              <span class="ico" data-icon="fire"></span>
+
+              <div>
+                <small>Estimated Ready Time</small>
+                <strong>15–20 minutes</strong>
+              </div>
+            </div>
+
+            <a href="#/track" class="btn btn-primary btn-block">
+              Track Your Order
+            </a>
+
+            <a href="#/menu" class="receipt-continue">
+              Continue Browsing
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- =========================================================
+     ORDER TRACKING
+     ========================================================= -->
+    <div class="page track-page" id="view-track">
+
+      <section class="track-section">
+
+        <div class="container">
+
+          <div class="track-header">
+            <div class="eyebrow text-coral">FARSLY ORDER</div>
+
+            <h1>Track Your Order</h1>
+
+            <p>
+              Follow your bowl from our kitchen to your hands.
+            </p>
+          </div>
+
+          <div class="track-card">
+
+            <div class="track-order-info">
+              <span>Order</span>
+              <strong id="track-order-id">#FARSLY-0000</strong>
+            </div>
+
+            <div class="track-timeline">
+
+              <div class="track-status active">
+                <div class="track-status-icon">✓</div>
+                <strong>Order Placed</strong>
+                <span>10:24 AM</span>
+              </div>
+
+              <div class="track-line active"></div>
+
+              <div class="track-status active">
+                <div class="track-status-icon">◌</div>
+                <strong>Preparing</strong>
+                <span>Now</span>
+              </div>
+
+              <div class="track-line"></div>
+
+              <div class="track-status">
+                <div class="track-status-icon">◌</div>
+                <strong>Cooking</strong>
+                <span>—</span>
+              </div>
+
+              <div class="track-line"></div>
+
+              <div class="track-status">
+                <div class="track-status-icon">◌</div>
+                <strong>Ready</strong>
+                <span>—</span>
+              </div>
+
+              <div class="track-line"></div>
+
+              <div class="track-status">
+                <div class="track-status-icon">◌</div>
+                <strong>On the Way</strong>
+                <span>—</span>
+              </div>
+
+            </div>
+
+            <div class="track-delivery">
+              <div>
+                <small>Estimated Delivery</small>
+                <strong>15–20 minutes</strong>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Mobile Bottom Tabs -->
+  <div class="mobile-tabs">
+    <div class="mobile-tabs-inner">
+      <a href="#/" class="mobile-tab active">
+        <span class="ico" data-icon="home"></span>
+        <span>Home</span>
+      </a>
+      <a href="#/menu" class="mobile-tab">
+        <span class="ico" data-icon="search"></span>
+        <span>Menu</span>
+      </a>
+      <a href="#/build" class="mobile-tab">
+        <span class="ico" data-icon="plus"></span>
+        <span>Build</span>
+      </a>
+      <a href="#/club" class="mobile-tab">
+        <span class="ico" data-icon="star"></span>
+        <span>Club</span>
+      </a>
+      <a href="#/profile" class="mobile-tab">
+        <span class="ico" data-icon="user"></span>
+        <span>Profile</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand">FARSLY</div>
+          <p class="footer-about">Premium, chef-crafted bowls made from organic, responsibly sourced ingredients. Eat
+            well, live well.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><span class="ico" data-icon="heart"></span></a>
+            <a href="#" aria-label="Twitter"><span class="ico" data-icon="star"></span></a>
+            <a href="#" aria-label="TikTok"><span class="ico" data-icon="fire"></span></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <a href="#/menu">Signature Bowls</a>
+          <a href="#/build">Build Your Own</a>
+          <a href="#/menu">Sides & Drinks</a>
+          <a href="#/menu">Catering</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#/about">Our Story</a>
+          <a href="#/ingredients">Sourcing</a>
+          <a href="#/sustainability">Sustainability</a>
+          <a href="#/careers">Careers</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="#/faq">FAQ</a>
+          <a href="#/contact">Contact Us</a>
+          <a href="#/terms">Terms of Service</a>
+          <a href="#/privacy">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Farsly. All rights reserved. A college midterm project.</p>
+        <p>Designed with intentionally premium aesthetics.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Checkout Toast -->
+  <div class="farsly-toast" id="farsly-toast">
+    <div class="toast-icon">✓</div>
+
+    <div class="toast-content">
+      <strong id="toast-title">Order placed</strong>
+      <span id="toast-message">Your order has been received.</span>
+    </div>
+  </div>
+
+  <!-- Toast success sound -->
+  <audio id="success-sound" preload="auto">
+    <source src="assets/img/order-success.mp3" type="audio/mpeg">
+  </audio>
+</body>
+
+</html>
